@@ -34,7 +34,7 @@ export class User extends Model<User, UserCreationAttrs> {
 
   @ApiProperty({example: 'Grande', description: 'Second name'})
   @Column({type: DataType.STRING, allowNull: true})
-  secondName: string;
+  lastName: string;
 
   @BelongsToMany(() => Role, () => UserRoles)
   roles : Role[];

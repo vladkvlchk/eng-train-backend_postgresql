@@ -10,7 +10,7 @@ export class CreateUserDto {
   @ApiProperty({example: "Grande"})
   @IsString({message: "Must be string"})
   @Length(2, 32, {message: 'Length of name must be 2-32'})
-  readonly secondName: string;
+  readonly lastName: string;
 
   @ApiProperty({example: "Student"})
   @IsString({message: "Must be string"})

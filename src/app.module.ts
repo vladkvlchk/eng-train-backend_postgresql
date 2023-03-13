@@ -22,7 +22,7 @@ import { UserRoles } from './roles/user-roles.model';
       port: 5433,
       username: 'postgres',
       password: 'root',
-      database: 'eng-train',
+      database: 'eng-train-1.0.1',
       models: [User, Role, UserRoles],
       autoLoadModels: true,
     }),

@@ -1,10 +1,12 @@
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import * as cookieParser from 'cookie-parser';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
   const PORT = process.env.PORT || 4444;
   const app = await NestFactory.create(AppModule, {cors: true});
+  app.use(cookieParser());
 
   const config = new DocumentBuilder()
         .setTitle('ENG-TRAIN documentation')
